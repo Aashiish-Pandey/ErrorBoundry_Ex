@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorBoundry from './ErrorBoundry'
 
 import Person from './Person';
 import ClickCounter from './ClickCounter';
@@ -12,8 +13,11 @@ export default function App() {
   };
   return (
     <div>
+      <ErrorBoundry>
       <Person person={person} />
+      <Person person={} />
       <ClickCounter />
+      </ErrorBoundry>
     </div>
   );
 }
